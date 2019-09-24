@@ -2,7 +2,7 @@
 <html manifest="./manifest.json">
 <head>
 
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -27,8 +27,8 @@
 
 <link rel="manifest" href="manifest.json">
 
-
 <!--Clevertap Integration-->
+
 
 <script type="text/javascript">
      var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
@@ -130,22 +130,20 @@ body {
 <body>
 
 	<div class="topnav">
-  	<div class="topnav">
   <a class="active" href="/Users/deepakyadav/Desktop/Github/Sample_website/Index.html">Send event</a>
-  <a href="/Users/deepakyadav/Desktop/Github/Sample_website/Set_identity.html">Set identity</a>
+  <a href="./Set_identity.html">Set identity</a>
   
 </div>
-</div>
+<h4> user property form</h4>
+
+<div class="form-group"><label for="email">Your Name</label> <input class="form-control" id="lblName" placeholder="Your Name" type="email" /></div>
+
+<div class="form-group"><label for="email">Your Email</label> <input class="form-control" id="input-email" placeholder="Your Email" type="email" /></div>
+<div class="form-group"><label for="email">Your Identity</label> <input class="form-control" id="input_Identity" placeholder="Custom_CT_ID" type="email" /></div>
+<button class="btn btn-default" id="btnClevertap" type="button">Set identity</button></div>
 
 
 
-<h4> Event property form</h4>
-
-<div class="form-group"><label for="email">Event name</label> <input class="form-control" id="Event_name" placeholder="Product Viewed" type="email" /></div>
-
-<div class="form-group"><label for="email">Product Name</label> <input class="form-control" id="product_name" placeholder="Tashan Lotion" type="email" /></div>
-<div class="form-group"><label for="email">Delivery_Date</label> <input class="form-control" id="Delivery_Date" placeholder="$D_1564642902" type="email" /></div>
-<button class="btn btn-default" id="btnClevertap_event" type="button">Send Event</button></div>
 
 
 
