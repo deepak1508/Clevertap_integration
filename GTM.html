@@ -1,0 +1,245 @@
+<!DOCTYPE html><link rel="manifest" href="manifest.json">
+
+<head>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MBTNR73');</script>
+<!-- End Google Tag Manager -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBs5_imj9itS8jDGF2xGHe0jf6BULs05h8",
+    authDomain: "sample-932e3.firebaseapp.com",
+    databaseURL: "https://sample-932e3.firebaseio.com",
+    projectId: "sample-932e3",
+    storageBucket: "",
+    messagingSenderId: "62070836940",
+    appId: "1:62070836940:web:f6c9e1db2f83a07a873c69"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Manifest linking -->
+
+<link rel="manifest" href="manifest.json">
+
+<!--Clevertap Integration-->
+
+
+<!-- <script type="text/javascript">
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+
+clevertap.account.push({"id":"ZWW-WWW-WWRZ"});
+clevertap.privacy.push({optOut: false}); 
+clevertap.privacy.push({useIP: false}); 
+ (function () {
+     var wzrk = document.createElement('script');
+     wzrk.type = 'text/javascript';
+     wzrk.async = true;
+     wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+     var s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(wzrk, s);
+  })();
+</script> -->
+<link href="https://d1vqfl8cu8qgdj.cloudfront.net/assets/css/common/livemasternew.css?v=1.1" rel="stylesheet" />
+
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<style type="text/css">.g_modal .modal-body {
+        background: #488f3e;
+        display: inline-block;
+    }
+
+    .g_modal p, h4, button {
+        color: #fff;
+    }
+
+    .g_modal h4 {
+        font-size: 22px;
+    }
+
+    .g_modal .modal-content {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    .g_modal .close {
+        opacity: 1;
+        margin-top: -10px;
+        color: #fff;
+        font-weight: normal;
+        margin-right: -37px;
+        border: none;
+    }
+
+    .g_modal .form-group label {
+        color: #fff;
+        font-size: 13px;
+        text-transform: capitalize;
+    }
+
+    .g_modal button {
+        width: 85px;
+        border-radius: 10px;
+        padding: 6px 10px 10px 10px;
+        text-align: center;
+        color: #fff;
+        background: none !important;
+        float: right;
+    }
+
+    .border-danger {
+        border: solid 1px red;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBTNR73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<div class="topnav">
+<div class="topnav">
+<a class="active" href="https://deepak1508.github.io/Clevertap_integration/index.html">Send event</a>
+<a href="https://deepak1508.github.io/Clevertap_integration/Set_identity.html">Set identity</a>
+  
+</div>
+</div>
+
+
+<h4> user property form</h4>
+
+<div class="form-group"><label for="email">Your Name</label> <input class="form-control" id="lblName" placeholder="Your Name" type="email" /></div>
+
+<div class="form-group"><label for="email">Your Email</label> <input class="form-control" id="input-email" placeholder="Your Email" type="email" /></div>
+<div class="form-group"><label for="email">Your Identity</label> <input class="form-control" id="input_Identity" placeholder="Custom_CT_ID" type="email" /></div>
+<button class="btn btn-default" id="btnClevertap" type="button">Set identity</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    var overlay = window.parent.document.getElementById("intentOpacityDiv");
+    var wrapper = window.parent.document.getElementById("intentPreview");
+    document.getElementById("btnClevertap").addEventListener("click", sendClevertap);
+    document.getElementById("btnClevertap_event").addEventListener("click", sendClevertap_event);
+    function ClosePoPup() {
+        document.getElementById("clevertap").style.display = "none";
+
+        { overlay.remove(); wrapper.remove(); }
+    }
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+   
+    function sendClevertap(e) {
+
+        var email = document.getElementById('input-email').value;
+        if (document.getElementById('lblName').value=="") {
+            var element = document.getElementById("lblName");
+            element.classList.add("border-danger");
+            return;
+        }
+        if (validateEmail(email)) {
+            
+
+          clevertap.onUserLogin.push({
+                                                   "Site": {
+                                                  "Identity":document.getElementById('input_Identity').value,
+                                                   "Name": document.getElementById('lblName').value,            // String
+                                                   "Email":email,         
+                                                   "MSG-email": true,                // Disable email notifications
+  
+                                                            }
+                                                   });
+           
+
+        }
+        else {
+            var element = document.getElementById("input-email");
+            element.classList.add("border-danger");
+
+        }
+    }
+    window.addEventListener('keydown', function (e) { if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) { if (e.target.nodeName == 'INPUT' && e.target.type == 'text') { e.preventDefault(); return false; } } }, true);
+
+function sendClevertap_event(e) {
+
+        var Event = document.getElementById('Event_name').value;
+        
+           clevertap.event.push(Event, {
+                                                                  "Product name": document.getElementById('product_name').value,
+                                                                  "Category": "Mens Accessories",
+                                                                  "Price": 59.99,
+                                                                  "Date":"$D_1564642902"
+                                                });
+           
+
+        }
+        
+
+</script>
+
+
+</body>
+</html>
+
+
