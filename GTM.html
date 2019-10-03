@@ -197,15 +197,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (validateEmail(email)) {
             
 
-          clevertap.onUserLogin.push({
-                                                   "Site": {
-                                                  "Identity":document.getElementById('input_Identity').value,
-                                                   "Name": document.getElementById('lblName').value,            // String
-                                                   "Email":email,         
-                                                   "MSG-email": true,                // Disable email notifications
+          // clevertap.onUserLogin.push({
+          //                                          "Site": {
+          //                                         "Identity":document.getElementById('input_Identity').value,
+          //                                          "Name": document.getElementById('lblName').value,            // String
+          //                                          "Email":email,         
+          //                                          "MSG-email": true,                // Disable email notifications
   
-                                                            }
-                                                   });
+          //                                                   }
+          //                                          });
           dataLayer.push({'Identity': document.getElementById('input_Identity').value,
                           "Name": document.getElementById('lblName').value,            // String
                           "Email":email,         
@@ -223,15 +223,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 function sendClevertap_event(e) {
 
-        var Event = document.getElementById('Event_name').value;
-        dataLayer.push({"Event Name": document.getElementById('Event_name').value});
+        // var Event = document.getElementById('Event_name').value;
+        // dataLayer.push({"Event Name": document.getElementById('Event_name').value});
         
-           clevertap.event.push(Event, {
-                                                                  "Product name": document.getElementById('product_name').value,
-                                                                  "Category": "Mens Accessories",
-                                                                  "Price": 59.99,
-                                                                  "Date":document.getElementById('Delivery_Date').value
-                                                });
+        //    clevertap.event.push(Event, {
+        //                                                           "Product name": document.getElementById('product_name').value,
+        //                                                           "Category": "Mens Accessories",
+        //                                                           "Price": 59.99,
+        //                                                           "Date":document.getElementById('Delivery_Date').value
+        //                                         });
 
            dataLayer.push({
                            "Product name": document.getElementById('product_name').value,
