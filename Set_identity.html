@@ -146,34 +146,13 @@ body {
 
 <div class="form-group"><label for="email">Your Email</label> <input class="form-control" id="input-email" placeholder="Your Email" type="email" /></div>
 <div class="form-group"><label for="email">Your Identity</label> <input class="form-control" id="input_Identity" placeholder="Custom_CT_ID" type="email" /></div>
-<button class="btn btn-default" id="btnClevertap" type="button">Set identity</button></div>
-
-
-
-
-
-
-
-
+<button class="btn btn-default" id="btnClevertap" type="button" onclick="sendClevertap()">Set identity</button></div>
 
 
 
 
 <script type="text/javascript">
 
-    var overlay = window.parent.document.getElementById("intentOpacityDiv");
-    var wrapper = window.parent.document.getElementById("intentPreview");
-    document.getElementById("btnClevertap").addEventListener("click", sendClevertap);
-    document.getElementById("btnClevertap_event").addEventListener("click", sendClevertap_event);
-    function ClosePoPup() {
-        document.getElementById("clevertap").style.display = "none";
-
-        { overlay.remove(); wrapper.remove(); }
-    }
-    function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
    
     function sendClevertap(e) {
 
@@ -204,21 +183,6 @@ body {
 
         }
     }
-    window.addEventListener('keydown', function (e) { if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) { if (e.target.nodeName == 'INPUT' && e.target.type == 'text') { e.preventDefault(); return false; } } }, true);
-
-function sendClevertap_event(e) {
-
-        var Event = document.getElementById('Event_name').value;
-        
-           clevertap.event.push(Event, {
-                                                                  "Product name": document.getElementById('product_name').value,
-                                                                  "Category": "Mens Accessories",
-                                                                  "Price": 59.99,
-                                                                  "Date":"$D_1564642902"
-                                                });
-           
-
-        }
         
 
 </script>
