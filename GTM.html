@@ -206,6 +206,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
                                                             }
                                                    });
+          dataLayer.push({'Identity': document.getElementById('input_Identity').value,
+                          "Name": document.getElementById('lblName').value,            // String
+                                                   "Email":email,         
+                                                   "MSG-email": true  });
            
 
         }
@@ -228,6 +232,12 @@ function sendClevertap_event(e) {
                                                                   "Price": 59.99,
                                                                   "Date":document.getElementById('Delivery_Date').value
                                                 });
+
+           dataLayer.push({
+                           "Product name": document.getElementById('product_name').value,
+                           "Category": "Mens Accessories",
+                           "Price": 59.99,
+                          "Date":document.getElementById('Delivery_Date').value });
            
 
         }
