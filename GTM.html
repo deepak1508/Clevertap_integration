@@ -155,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="form-group"><label for="email">Product Name</label> <input class="form-control" id="product_name" placeholder="Tashan Lotion" type="email" /></div>
 <div class="form-group"><label for="email">Delivery_Date</label> <input class="form-control" id="Delivery_Date" placeholder="$D_1564642902" type="email" /></div>
-<button class="btn btn-default" id="btnClevertap_event" type="button" onclick="sendClevertap_event()">Send Event</button></div>
+<button class="btn btn-default" id="event" type="button" onclick="sendClevertap_event()">Send Event</button></div>
 
 
 <h4> user property form</h4>
@@ -164,7 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="form-group"><label for="email">Your Email</label> <input class="form-control" id="input-email" placeholder="Your Email" type="email" /></div>
 <div class="form-group"><label for="email">Your Identity</label> <input class="form-control" id="input_Identity" placeholder="Custom_CT_ID" type="email" /></div>
-<button class="btn btn-default" id="btnClevertap" type="button" onclick="sendClevertap()">Set identity</button></div>
+<button class="btn btn-default" id="identity" type="button" onclick="sendClevertap()">Set identity</button></div>
 
 
 
@@ -208,8 +208,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                    });
           dataLayer.push({'Identity': document.getElementById('input_Identity').value,
                           "Name": document.getElementById('lblName').value,            // String
-                                                   "Email":email,         
-                                                   "MSG-email": true  });
+                          "Email":email,         
+                          "MSG-email": true  });
            
 
         }
@@ -237,7 +237,7 @@ function sendClevertap_event(e) {
                            "Product name": document.getElementById('product_name').value,
                            "Category": "Mens Accessories",
                            "Price": 59.99,
-                          "Date":document.getElementById('Delivery_Date').value });
+                           "Date":document.getElementById('Delivery_Date').value });
            
 
         }
